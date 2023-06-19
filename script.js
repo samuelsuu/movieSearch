@@ -1,5 +1,5 @@
 // API Key obtained from OMDb API
-const apiKey = 'YOUR_API_KEY';
+const apiKey = 'c929301e';
 
 const searchButton = document.getElementById('search-button');
 const searchInput = document.getElementById('search-input');
@@ -16,7 +16,7 @@ function searchMovies() {
   movieDetails.innerHTML = '';
 
   // Fetch movie data from OMDb API
-  fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=c929301e`)
+  fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${searchTerm}`)
     .then(response => response.json())
     .then(data => {
       if (data.Response === 'True') {
@@ -62,7 +62,7 @@ function displayMovies(movies) {
 
 function getMovieDetails(imdbID) {
   // Fetch movie details from OMDb API
-  fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=c929301e`)
+  fetch(`http://www.omdbapi.com/?apikey=${apiKey}&i=${imdbID}`)
     .then(response => response.json())
     .then(data => {
       displayMovieDetails(data);
