@@ -1,5 +1,5 @@
 // API Key obtained from OMDb API
-const apiKey = 'YOUR_API_KEY';
+const apiKey = 'c929301e';
 
 const searchButton = document.getElementById('search-button');
 const searchInput = document.getElementById('search-input');
